@@ -14,7 +14,7 @@
           >
             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
           </svg>
-          <h1 class="text-xl font-bold">野生动物保护协会</h1>
+          <h1 class="text-xl font-bold">野生动物保护test</h1>
         </NuxtLink>
 
         <!-- 桌面导航 - 添加搜索框和高亮状态 -->

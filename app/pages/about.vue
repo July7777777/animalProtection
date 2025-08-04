@@ -106,11 +106,11 @@
           <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
             <img
               src="https://picsum.photos/id/1005/400/400"
-              alt="张明 - 会长"
+              alt="张三 - 会长"
               class="w-full h-64 object-cover"
             >
             <div class="p-6">
-              <h3 class="text-xl font-bold text-green-800 mb-1">张明</h3>
+              <h3 class="text-xl font-bold text-green-800 mb-1">张三</h3>
               <p class="text-green-600 mb-3">会长</p>
               <p class="text-gray-600 text-sm">野生动物生态学博士，拥有20年野生动物保护经验，曾任国家林业局濒危物种保护中心研究员。</p>
             </div>
@@ -120,11 +120,11 @@
           <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
             <img
               src="https://picsum.photos/id/1000/400/400"
-              alt="李华 - 项目总监"
+              alt="李四 - 项目总监"
               class="w-full h-64 object-cover"
             >
             <div class="p-6">
-              <h3 class="text-xl font-bold text-green-800 mb-1">李华</h3>
+              <h3 class="text-xl font-bold text-green-800 mb-1">李四</h3>
               <p class="text-green-600 mb-3">项目总监</p>
               <p class="text-gray-600 text-sm">环境科学硕士，负责保护项目的规划与实施，曾参与多个国际野生动物保护项目。</p>
             </div>
@@ -134,11 +134,11 @@
           <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
             <img
               src="https://picsum.photos/id/1011/400/400"
-              alt="王芳 - 科研主管"
+              alt="王五 - 科研主管"
               class="w-full h-64 object-cover"
             >
             <div class="p-6">
-              <h3 class="text-xl font-bold text-green-800 mb-1">王芳</h3>
+              <h3 class="text-xl font-bold text-green-800 mb-1">王五</h3>
               <p class="text-green-600 mb-3">科研主管</p>
               <p class="text-gray-600 text-sm">动物学博士，负责保护生物学研究和数据分析，发表学术论文30余篇。</p>
             </div>
@@ -148,11 +148,11 @@
           <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
             <img
               src="https://picsum.photos/id/1027/400/400"
-              alt="赵强 - 公众教育主任"
+              alt="赵六 - 公众教育主任"
               class="w-full h-64 object-cover"
             >
             <div class="p-6">
-              <h3 class="text-xl font-bold text-green-800 mb-1">赵强</h3>
+              <h3 class="text-xl font-bold text-green-800 mb-1">赵六</h3>
               <p class="text-green-600 mb-3">公众教育主任</p>
               <p class="text-gray-600 text-sm">环境教育专家，负责开发教育项目和公众宣传活动，致力于提高公众环保意识。</p>
             </div>
