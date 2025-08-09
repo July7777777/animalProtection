@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-green-800 text-white shadow-md transition-all duration-300">
+  <header class="bg-gradient-to-r from-green-800 to-green-700 text-white shadow-lg transition-all duration-300">
     <div class="container mx-auto px-4 py-3">
       <div class="flex justify-between items-center">
         <!-- Logo区域 - 添加首页链接 -->
@@ -24,7 +24,7 @@
               v-for="link in navLinks"
               :key="link.path"
               :to="link.path"
-              :class="[isActive(link.path) ? 'text-green-300 border-b-2 border-green-400' : 'hover:text-green-200', 'transition-colors py-2 font-medium']"
+              :class="[isActive(link.path) ? 'text-green-300 border-b-2 border-green-400' : 'hover:text-green-200', 'transition-colors py-2 font-medium nav-link']"
             >
               {{ link.name }}
             </NuxtLink>
@@ -36,7 +36,7 @@
               <input
                 type="text"
                 placeholder="搜索保护项目..."
-                class="pl-10 pr-4 py-2 rounded-full text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-green-400 w-48 lg:w-64 transition-all"
+                class="pl-10 pr-4 py-2 rounded-full text-gray-800 text-sm bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent w-48 lg:w-64 transition-all placeholder:text-gray-400"
               >
               <svg
                 class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
@@ -71,7 +71,22 @@
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              :d="menuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-7 6h7'"
+              :d="menuOpen ? 'M6 18L18 6' : 'M4 6h16'"
+              style="transition: all 0.3s ease-in-out;"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              :d="menuOpen ? 'M6 6L18 18' : 'M4 12h16'"
+              :style="{ opacity: menuOpen ? 0 : 1, transition: 'opacity 0.3s ease-in-out' }"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              :d="menuOpen ? 'M6 6L18 18' : 'M4 18h16'"
+              style="transition: all 0.3s ease-in-out;"
             />
           </svg>
         </button>
@@ -80,7 +95,7 @@
       <!-- 移动端导航菜单 - 添加过渡动画 -->
       <Transition name="menu">
         <div
-          v-if="menuOpen"
+          v-show="menuOpen"
           class="md:hidden mt-4 pb-2 space-y-3"
         >
           <NuxtLink
@@ -136,28 +151,65 @@
 
 <style scoped>
 
-  /* 移动端菜单过渡动画 */
-  .menu-enter-active,
-  .menu-leave-active {
-    transition: all 0.3s ease;
-  }
-
-  .menu-enter-from,
-  .menu-leave-to {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
   /* 导航栏滚动效果 */
   header {
-    position: sticky;
+    position: fixed;
+    /* 改为 fixed 定位 */
+    /* 之前的粘性定位会把下边正文挤压下去 */
     top: 0;
     z-index: 50;
+    width: 100%;
+    /* 确保宽度占满 */
   }
 
   header.scrolled {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+
+  /* 优化移动端菜单过渡动画 */
+  .menu-enter-active {
+    transition: all .4s ease-in-out;
+    /* transition: all .4s cubic-bezier(0.22, 1, 0.36, 1); */
+    overflow: hidden;
+    will-change: max-height, opacity, transform, margin, padding;
+    /* 告知浏览器即将发生的变化 */
+  }
+
+  .menu-leave-active {
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    will-change: max-height, opacity, transform, margin, padding;
+    /* 告知浏览器即将发生的变化 */
+  }
+
+  .menu-enter-from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px) scaleY(1);
+    box-shadow: none;
+  }
+
+  .menu-leave-to {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px) scaleY(1);
+    box-shadow: none;
+    /*展开时有个mt-4,pb-2 关闭时要去掉这个margin-top. 不加这个会导致菜单关闭时，内容区域会有一个margin-top 从而看起来会卡顿一下再消失 */
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-enter-to,
+  .menu-leave-from {
+    /* mt-4 */
+    margin-top: 1rem;
+    /* pb-2 */
+    padding-bottom: 0.5rem;
+    opacity: 1;
+    max-height: 500px;
+    /* 根据实际菜单内容调整最大高度 */
+    transform: translateY(0) scaleY(1);
   }
 </style>

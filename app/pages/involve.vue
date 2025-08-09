@@ -25,7 +25,7 @@
           <!-- Donation Option 1 -->
           <div class="bg-gray-50 rounded-lg p-8 text-center shadow-md hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-bold text-green-800 mb-4">一次性捐赠</h3>
-            <p class="text-gray-600 mb-6">支持我们的保护项目，帮助野生动物获得更好的生存环境</p>
+            <p class="text-gray-600 mb-6 min-h-[72px]">支持我们的保护项目，帮助野生动物获得更好的生存环境</p>
             <button
               @click="handleClick"
               class="bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-md transition-colors w-full"
@@ -37,7 +37,7 @@
           <!-- Donation Option 2 -->
           <div class="bg-gray-50 rounded-lg p-8 text-center shadow-md hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-bold text-green-800 mb-4">月度捐赠</h3>
-            <p class="text-gray-600 mb-6">成为长期支持者，每月定期为野生动物保护贡献力量</p>
+            <p class="text-gray-600 mb-6 min-h-[72px]">成为长期支持者，每月定期为野生动物保护贡献力量</p>
             <button
               @click="handleClick"
               class="bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-md transition-colors w-full"
@@ -49,7 +49,7 @@
           <!-- Donation Option 3 -->
           <div class="bg-gray-50 rounded-lg p-8 text-center shadow-md hover:shadow-lg transition-shadow">
             <h3 class="text-xl font-bold text-green-800 mb-4">指定项目捐赠</h3>
-            <p class="text-gray-600 mb-6">选择您关心的特定保护项目进行定向支持</p>
+            <p class="text-gray-600 mb-6 min-h-[72px]">选择您关心的特定保护项目进行定向支持</p>
             <button
               @click="handleClick"
               class="bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-md transition-colors w-full"
@@ -168,22 +168,22 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="py-16 bg-green-800 text-white">
+    <!-- 订阅区域 -->
+    <section class="py-16 bg-green-50">
       <div class="container mx-auto px-4 max-w-3xl text-center">
-        <h2 class="text-3xl font-bold mb-4">订阅我们的电子通讯</h2>
-        <p class="text-xl mb-8">获取最新的野生动物保护资讯和活动信息</p>
+        <h2 class="text-3xl font-bold text-green-800 mb-4">订阅我们的电子通讯</h2>
+        <p class="text-lg text-gray-600 mb-8">获取最新的野生动物保护资讯和活动信息</p>
 
         <form class="flex flex-col sm:flex-row gap-2 max-w-lg mx-auto">
           <input
             type="email"
             placeholder="您的邮箱地址"
-            class="flex-grow px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600 text-gray-800"
+            class="flex-grow px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-green-600"
             required
           >
           <button
-            @click="handleClick"
             type="submit"
-            class="bg-white hover:bg-green-50 text-green-600 font-bold py-3 px-6 rounded-md transition-colors whitespace-nowrap"
+            class="bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-6 rounded-md transition-colors whitespace-nowrap"
           >
             立即订阅
           </button>

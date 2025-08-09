@@ -2,6 +2,7 @@
   <footer class="bg-green-900 text-white pt-12 pb-6">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <!-- 第一列：Logo和简介 -->
         <div>
           <h3 class="text-xl font-bold mb-4 flex items-center">
             <svg
@@ -72,73 +73,81 @@
               </svg>
             </a>
           </div>
-
-          <div>
-            <h4 class="text-lg font-bold mb-4">快速链接</h4>
-            <ul class="space-y-2">
-              <li>
-                <NuxtLink
-                  to="/"
-                  class="text-green-200 hover:text-white transition-colors"
-                >首页</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink
-                  to="/about"
-                  class="text-green-200 hover:text-white transition-colors"
-                >关于我们</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink
-                  to="/species"
-                  class="text-green-200 hover:text-white transition-colors"
-                >保护物种</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink
-                  to="/projects"
-                  class="text-green-200 hover:text-white transition-colors"
-                >保护项目</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink
-                  to="/news"
-                  class="text-green-200 hover:text-white transition-colors"
-                >新闻动态</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink
-                  to="/involve"
-                  class="text-green-200 hover:text-white transition-colors"
-                >立即参与</NuxtLink>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-bold mb-4">联系我们</h4>
-            <ul class="space-y-2 text-green-200">
-              <li>地址：北京市海淀区中关村南大街5号</li>
-              <li>电话：010-12345678</li>
-              <li>邮箱：contact@wildlifeprotection.org</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-bold mb-4">支持我们</h4>
-            <p class="text-green-200 mb-4">您的支持是我们保护野生动物的最大动力</p>
-            <NuxtLink
-              to="/involve"
-              class="inline-block bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-md transition-colors"
-            >
-              立即捐赠
-            </NuxtLink>
-          </div>
         </div>
 
-        <div class="border-t border-green-800 mt-8 pt-6 text-center text-green-300 text-sm">
-          <p>&copy; 测试 版权所有 | 京ICP备测试</p>
+        <!-- 第二列：快速链接 -->
+        <div>
+          <h4 class="text-lg font-bold mb-4">快速链接</h4>
+          <ul class="space-y-2">
+            <li>
+              <NuxtLink
+                to="/"
+                class="text-green-200 hover:text-white transition-colors"
+              >首页</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
+                to="/about"
+                class="text-green-200 hover:text-white transition-colors"
+              >关于我们</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
+                to="/species"
+                class="text-green-200 hover:text-white transition-colors"
+              >保护物种</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
+                to="/projects"
+                class="text-green-200 hover:text-white transition-colors"
+              >保护项目</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
+                to="/news"
+                class="text-green-200 hover:text-white transition-colors"
+              >新闻动态</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
+                to="/involve"
+                class="text-green-200 hover:text-white transition-colors"
+              >立即参与</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink
+                to="/acknowledgements"
+                class="text-green-200 hover:text-white transition-colors"
+              >致谢</NuxtLink>
+            </li>
+          </ul>
         </div>
+
+        <!-- 第三列：联系我们 -->
+        <div>
+          <h4 class="text-lg font-bold mb-4">联系我们</h4>
+          <ul class="space-y-2 text-green-200">
+            <li>地址：北京市海淀区中关村南大街5号test</li>
+            <li>电话：010-12345678test</li>
+            <li>邮箱：contact@wildlifeprotection.org-test</li>
+          </ul>
+        </div>
+
+        <!-- 第四列：支持我们 -->
+        <div>
+          <h4 class="text-lg font-bold mb-4">支持我们</h4>
+          <p class="text-green-200 mb-4">您的支持是我们保护野生动物的最大动力</p>
+          <NuxtLink
+            to="/involve"
+            class="inline-block bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-md transition-colors"
+          >
+            立即捐赠
+          </NuxtLink>
+        </div>
+      </div>
+      <div class="border-t border-green-800 mt-8 pt-6 text-center text-green-300 text-sm ">
+        <p>&copy; 测试 版权所有 | 京ICP备测试</p>
       </div>
     </div>
   </footer>

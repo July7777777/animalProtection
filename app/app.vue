@@ -5,9 +5,3 @@
     <AppFooter />
   </div>
 </template>
-
-<!-- <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
-</template> -->

@@ -1,0 +1,22 @@
+/* 按钮下划线动画 */
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link:before {
+  content: '';
+  height: 2px;
+  /* background-color: #4dfc55; */
+  background-color: #05df72;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: 0.3s;
+}
+
+.nav-link:hover:before {
+  transform: scaleX(1);
+}
